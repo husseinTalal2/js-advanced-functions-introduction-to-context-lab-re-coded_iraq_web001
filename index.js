@@ -25,8 +25,8 @@ function createTimeInEvent(emp, dateStamp){
 }
 
 function createTimeOutEvent(emp, dateStamp){
-  const [date, hour] = dateStamp().split(" ");
-  const data = {
+  let [date, hour] = dateStamp().split(" ");
+  let data = {
     type: "TimeOut",
     hour: parseInt(hour, 10),
     date:date
