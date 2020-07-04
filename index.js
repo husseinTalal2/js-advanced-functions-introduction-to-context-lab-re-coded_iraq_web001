@@ -9,3 +9,6 @@ function createEmployeeRecord(employee){
     timeOutEvents:[]
   }
 }
+function createEmployeeRecords(){
+  
+}
