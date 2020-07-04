@@ -55,3 +55,6 @@ function allWagesFor(emp){
 
     return payable
 }
+function findEmployeeByFirstName(srcArray, firstName) {
+  return srcArray.find(rec=>rec.firstName === firstName)
+}
