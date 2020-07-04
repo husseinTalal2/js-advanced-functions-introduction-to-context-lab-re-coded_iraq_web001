@@ -18,7 +18,7 @@ function createTimeInEvent(emp, dateStamp){
   const data = {
     type: "TimeIn",
     hour: parseInt(hour, 10),
-    date
+    date:date
   }
   emp.timeInEvents.push(data);
   return emp;
@@ -29,7 +29,7 @@ function createTimeOutEvent(emp, dateStamp){
   const data = {
     type: "TimeOut",
     hour: parseInt(hour, 10),
-    date
+    date:date
   }
   emp.timeInEvents.push(data);
   return emp;
