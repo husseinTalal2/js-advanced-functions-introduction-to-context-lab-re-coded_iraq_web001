@@ -12,4 +12,3 @@ function createEmployeeRecord(employee){
 function createEmployeeRecords(employeesData){
   return employeeData.map(employeeData => createEmployeeRecord(employeeData))
 };
-
