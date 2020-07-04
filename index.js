@@ -41,3 +41,8 @@ function hoursWorkedOnDate(empRecord, date){
   const outEvent = empRecord.timeOutEvents.find(e=> e.date === date)
   return (outEvent.hour - inEvent.hour)/100;
 }
+
+function wagesEarnedOnDate(emp, date){
+    let rawWage = hoursWorkedOnDate(emp, date) * emp.payPerHour;
+    return parseFloat(rawWage.toString());
+}
