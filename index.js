@@ -9,7 +9,7 @@ function createEmployeeRecord(employee){
     timeOutEvents:[]
   }
 }
-let createEmployeeRecords = function(employeeRowData) {
+function createEmployeeRecords(employeesData) {
     return employeeRowData.map(function(row){
         return createEmployeeRecord(row)
     })
