@@ -13,15 +13,16 @@ function createEmployeeRecords(employeesData){
   return employeesData.map(employeeData => createEmployeeRecord(employeeData))
 };
 
-function createTimeInEvent(emp, dateStamp){
-  const [date, hour] = dateStamp().split(" ");
-  const data = {
-    type: "TimeIn",
-    hour: parseInt(hour, 10),
-    date:date
-  }
-  emp.timeInEvents.push(data);
-  return emp;
+let createTimeInEvent = function(employee, dateStamp){
+    let [date, hour] = dateStamp.split(' ')
+
+    employee.timeInEvents.push({
+        type: "TimeIn",
+        hour: parseInt(hour, 10),
+        date,
+    })
+
+    return employee
 }
 
 function createTimeOutEvent(emp, dateStamp){
