@@ -46,3 +46,12 @@ function wagesEarnedOnDate(emp, date){
     let rawWage = hoursWorkedOnDate(emp, date) * emp.payPerHour;
     return parseFloat(rawWage.toString());
 }
+
+function allWagesFor(emp){
+    let eligibleDates = emp.timeInEvents.map(e=>e.date);
+    let payable = eligibleDates.reduce((memo, d)=>{
+        return memo + wagesEarnedOnDate(emp, d)
+    }, 0)
+
+    return payable
+}
