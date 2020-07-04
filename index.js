@@ -13,16 +13,16 @@ function createEmployeeRecords(employeesData){
   return employeesData.map(employeeData => createEmployeeRecord(employeeData))
 };
 
-let createTimeInEvent = function(employee, dateStamp){
+function createTimeInEvent(emp, dateStamp){
     let [date, hour] = dateStamp.split(' ')
 
-    employee.timeInEvents.push({
+    emp.timeInEvents.push({
         type: "TimeIn",
         hour: parseInt(hour, 10),
         date,
     })
 
-    return employee
+    return emp
 }
 
 function createTimeOutEvent(emp, dateStamp){
